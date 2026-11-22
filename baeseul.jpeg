@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ANGEL MAID CAFE ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+
+  background: #fff9f8;
+
+  color: #76616b;
+
+  font-family: 'Noto Serif KR', serif;
+
+}
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+header {
+
+  background: rgba(255,249,248,0.95);
+
+  border-bottom: 1px solid #f1dce3;
+
+  padding: 20px 15px;
+
+  text-align: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+
+}
+
+.logo {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 27px;
+
+  letter-spacing: 3px;
+
+  color: #c78fa4;
+
+}
+
+.subtitle {
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  color: #b89aa5;
+
+  margin-top: 5px;
+
+}
+
+nav {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 28px;
+
+  margin-top: 18px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+}
+
+nav a:hover { color: #d58da9; }
+
+.hero {
+
+  text-align: center;
+
+  padding: 95px 20px 85px;
+
+  background:
+
+    radial-gradient(ellipse at center, #fff 0%, #fff1f4 65%, #fce8ee 100%);
+
+  border-bottom: 1px solid #f3dce4;
+
+}
+
+.hero-small {
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: #c38fa2;
+
+}
+
+.hero h1 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(38px, 9vw, 65px);
+
+  font-weight: 400;
+
+  color: #c58da2;
+
+  margin: 20px 0;
+
+}
+
+.hero p {
+
+  font-size: 13px;
+
+  line-height: 2.3;
+
+  color: #947b85;
+
+}
+
+.hero-button {
+
+  display: inline-block;
+
+  margin-top: 30px;
+
+  padding: 13px 35px;
+
+  border: 1px solid #d7a7b7;
+
+  color: #b77e94;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  transition: .3s;
+
+}
+
+.hero-button:hover {
+
+  background: #d7a7b7;
+
+  color: white;
+
+}
+
+.section {
+
+  padding: 75px 20px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+}
+
+.section-title {
+
+  text-align: center;
+
+  margin-bottom: 45px;
+
+}
+
+.section-title h2 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 36px;
+
+  font-weight: 400;
+
+  color: #c58da2;
+
+  letter-spacing: 2px;
+
+}
+
+.section-title p {
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  margin-top: 10px;
+
+  color: #bda0aa;
+
+}
+
+.line {
+
+  width: 45px;
+
+  height: 1px;
+
+  background: #d9afbd;
+
+  margin: 17px auto;
+
+}
+
+/* MENU */
+
+.menu-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+
+}
+
+.menu-card {
+
+  background: white;
+
+  border: 1px solid #f1dce3;
+
+  padding: 25px 15px;
+
+  text-align: center;
+
+  transition: .3s;
+
+}
+
+.menu-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 20px #e9cdd5;
+
+}
+
+.menu-icon {
+
+  font-size: 28px;
+
+  margin-bottom: 13px;
+
+}
+
+.menu-card h3 {
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #aa758a;
+
+}
+
+.menu-card p {
+
+  font-size: 10px;
+
+  margin-top: 7px;
+
+  color: #bba6ae;
+
+}
+
+.price {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 17px;
+
+  margin-top: 15px;
+
+  color: #c58da2;
+
+}
+
+/* MAID */
+
+.maid-box {
+
+  background: white;
+
+  border: 1px solid #efd9e1;
+
+  padding: 15px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+
+  align-items: center;
+
+}
+
+.maid-photo {
+
+  width: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 5px solid #fff7f8;
+
+}
+
+.maid-info {
+
+  padding: 15px;
+
+}
+
+.maid-label {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: #c58da2;
+
+}
+
+.maid-info h3 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 35px;
+
+  font-weight: 400;
+
+  color: #c58da2;
+
+  margin: 12px 0;
+
+}
+
+.maid-korean {
+
+  font-size: 13px;
+
+  color: #a98291;
+
+}
+
+.maid-desc {
+
+  font-size: 12px;
+
+  line-height: 2.2;
+
+  margin-top: 23px;
+
+  color: #927c85;
+
+}
+
+.maid-tags {
+
+  margin-top: 20px;
+
+}
+
+.maid-tags span {
+
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border: 1px solid #f0d9e1;
+
+  color: #bd899d;
+
+  font-size: 10px;
+
+  margin: 3px;
+
+}
+
+/* NOTICE */
+
+.notice-box {
+
+  background: white;
+
+  border: 1px solid #f0dce3;
+
+  padding: 28px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  line-height: 2.5;
+
+}
+
+.notice-box strong {
+
+  color: #c58da2;
+
+}
+
+/* FOOTER */
+
+footer {
+
+  background: #f9edf0;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  color: #b18c9a;
+
+  font-size: 10px;
+
+  line-height: 2.5;
+
+  letter-spacing: 1px;
+
+}
+
+.footer-logo {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+  color: #c58da2;
+
+}
+
+@media (max-width: 600px) {
+
+  nav { gap: 17px; font-size: 10px; }
+
+  .maid-box {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .maid-photo {
+
+    max-height: 470px;
+
+    object-position: center 25%;
+
+  }
+
+  .maid-info { text-align: center; }
+
+  .menu-grid { gap: 10px; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">ANGEL MAID CAFE</div>
+
+  <div class="subtitle">♡ WELCOME TO OUR LITTLE PARADISE ♡</div>
+
+  <nav>
+
+    <a href="#home">HOME</a>
+
+    <a href="#menu">MENU</a>
+
+    <a href="#maid">MAID</a>
+
+    <a href="#notice">NOTICE</a>
+
+  </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+  <div class="hero-small">୨୧ WELCOME, MASTER ୨୧</div>
+
+  <h1>Angel Maid Cafe</h1>
+
+  <p>
+
+    천사들이 머무는 작은 디저트 천국.<br>
+
+    오늘도 당신을 위한 특별한 하루를 준비했어요.<br>
+
+    부디 행복한 시간을 보내시길!
+
+  </p>
+
+  <a href="#menu" class="hero-button">EXPLORE OUR CAFE ♡</a>
+
+</section>
+
+<section class="section" id="menu">
+
+  <div class="section-title">
+
+    <h2>Our Menu</h2>
+
+    <div class="line"></div>
+
+    <p>SWEET MOMENTS FOR YOU</p>
+
+  </div>
+
+  <div class="menu-grid">
+
+    <div class="menu-card">
+
+      <div class="menu-icon">🍰</div>
+
+      <h3>Strawberry Cake</h3>
+
+      <p>딸기 생크림 케이크</p>
+
+      <div class="price">₩ 7,500</div>
+
+    </div>
+
+    <div class="menu-card">
+
+      <div class="menu-icon">🧁</div>
+
+      <h3>Angel Cupcake</h3>
+
+      <p>엔젤 바닐라 컵케이크</p>
+
+      <div class="price">₩ 5,000</div>
+
+    </div>
+
+    <div class="menu-card">
+
+      <div class="menu-icon">☕</div>
+
+      <h3>Royal Milk Tea</h3>
+
+      <p>로열 밀크티</p>
+
+      <div class="price">₩ 6,000</div>
+
+    </div>
+
+    <div class="menu-card">
+
+      <div class="menu-icon">🍓</div>
+
+      <h3>Pink Ade</h3>
+
+      <p>핑크 스트로베리 에이드</p>
+
+      <div class="price">₩ 6,500</div>
+
+    </div>
+
+    <div class="menu-card">
+
+      <div class="menu-icon">🍮</div>
+
+      <h3>Angel Pudding</h3>
+
+      <p>수제 바닐라 푸딩</p>
+
+      <div class="price">₩ 4,500</div>
+
+    </div>
+
+    <div class="menu-card">
+
+      <div class="menu-icon">🍪</div>
+
+      <h3>Heart Cookie</h3>
+
+      <p>하트 버터 쿠키</p>
+
+      <div class="price">₩ 3,500</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="maid">
+
+  <div class="section-title">
+
+    <h2>Our Maid</h2>
+
+    <div class="line"></div>
+
+    <p>MEET YOUR ANGEL</p>
+
+  </div>
+
+  <div class="maid-box">
+
+    <img
+
+      src="baeseul.jpeg"
+
+      alt="Angel Maid Bae Iseul"
+
+      class="maid-photo"
+
+    >
+
+    <div class="maid-info">
+
+      <div class="maid-label">♡ OUR SPECIAL MAID ♡</div>
+
+      <h3>Bae Iseul</h3>
+
+      <div class="maid-korean">배이슬</div>
+
+      <div class="line"></div>
+
+      <div class="maid-desc">
+
+        어서 오세요, 주인님!<br>
+
+        오늘도 찾아와 주셔서 정말 기뻐요.<br>
+
+        이슬이 정성껏 준비한 달콤한 시간,<br>
+
+        함께 즐겨 주실 거죠?<br><br>
+
+        언제나 사랑스러운 미소로<br>
+
+        여러분을 맞이하는 엔젤 메이드예요.
+
+      </div>
+
+      <div class="maid-tags">
+
+        <span>ANGEL</span>
+
+        <span>SWEET</span>
+
+        <span>LOVELY</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="notice">
+
+  <div class="section-title">
+
+    <h2>Notice</h2>
+
+    <div class="line"></div>
+
+    <p>CAFE INFORMATION</p>
+
+  </div>
+
+  <div class="notice-box">
+
+    <strong>♡ ANGEL MAID CAFE ♡</strong><br>
+
+    당신의 하루에 작은 행복을 더해 드립니다.<br><br>
+
+    모든 메뉴는 정성을 담아 준비합니다.<br>
+
+    방문해 주시는 모든 분께 감사드립니다.<br><br>
+
+    <strong>Thank you for visiting us!</strong>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="footer-logo">ANGEL MAID CAFE</div>
+
+  ୨୧ A LITTLE HEAVEN JUST FOR YOU ୨୧<br>
+
+  © 2026 ANGEL MAID CAFE. ALL RIGHTS RESERVED.
+
+</footer>
+
+</body>
+
+</html>
